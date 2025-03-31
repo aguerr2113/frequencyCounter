@@ -19,10 +19,20 @@ public class App {
         // Create an empty HashMap
         HashMap<String, Integer> myHashMap = new HashMap<>();
 
-        // use for loop to loop through array and check if all of the characters in the string are correctly split and displayed
-        for (String string : wrdArray) {
-            System.out.println(string);
+        // start forloop, for each element in the array take one character and store as ch
+        for (String ch : wrdArray) {
+            // get ordefault to look inside of hashmap for the first ch, if it is not fount it returns 0 if it is it returns the value already storedto the ch. Increase the count(+1) 
+            // go through each character one by one
+            // check if its already in the hashmap
+            // if its not it starts the count at 1
+            // if it is in the hashmap it increases the count by 1
+            // process continues untial all characters are counted
+            myHashMap.put(ch,myHashMap.getOrDefault(ch, 0)+1);
         }
+
+        System.out.println(myHashMap);
+        sc.close();
+        
     }
 
 }
