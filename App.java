@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.HashMap;
 // IMPORT scanner to use to capture user input
 
 public class App {
@@ -15,6 +16,9 @@ public class App {
         word = word.replaceAll("\\s", "").toLowerCase();
         // create array variable that has the string variable as the array, then split the string into the array
         String[] wrdArray = word.split("");
+        // Create an empty HashMap
+        HashMap<String, Integer> myHashMap = new HashMap<>();
+
         // use for loop to loop through array and check if all of the characters in the string are correctly split and displayed
         for (String string : wrdArray) {
             System.out.println(string);
